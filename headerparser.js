@@ -3,7 +3,6 @@ const headerparser = require("express").Router();
 module.exports = headerparser;
 
 headerparser.get("/api/whoami", (req, res, next) => {
-try{
 	let ip = /^[\s\S]+:([\s\S]+)/.exec(req.headers["x-forwarded-for"] ||
 	req.connection.remoteAddress ||
 	req.socket.remoteAddress ||
@@ -16,8 +15,5 @@ try{
 		"software": soft
 	});
 	res.send(rt);
-}catch(e){
-	res.sendStatus(500);
-}
-})
+});
 
