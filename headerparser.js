@@ -2,7 +2,7 @@ const headerparser = require("express").Router();
 
 module.exports = headerparser;
 
-headerparser.get("/api/whoami", (req, res, next) => {
+headerparser.get("/whoami", (req, res, next) => {
 	let ip = /^[\s\S]+:([\s\S]+)/.exec(req.headers["x-forwarded-for"] ||
 	req.connection.remoteAddress ||
 	req.socket.remoteAddress ||
