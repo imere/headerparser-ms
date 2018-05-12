@@ -4,7 +4,7 @@
 
 ### Example usage:
 
-	https://im-headerparser-ms.glitch.me/api/whoami
+	[https://im-headerparser-ms.glitch.me/api/whoami](https://im-headerparser-ms.glitch.me/api/whoami)
 
 ### Example output:
 
