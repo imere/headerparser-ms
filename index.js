@@ -10,11 +10,9 @@ app.set("views", path.join(__dirname, "pages"));
 
 app.set("view engine", "ejs");
 
-const homeRouter = require("./home");
-app.use("/", homeRouter);
+app.use("/", require("./home"));
 
-const hpRouter = require("./headerparser");
-app.use("/api", hpRouter);
+app.use("/api", require("./headerparser"));
 
 app.listen(PORT, () => {
 	console.log(`Listening on port ${PORT}`);
